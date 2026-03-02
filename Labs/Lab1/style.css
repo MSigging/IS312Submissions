@@ -1,0 +1,86 @@
+/* 
+Author: Megdelene Sigging
+Date: 01 March 2026
+Description: External CSS file for styling website interface using CSS Grid Layout
+*/
+
+/* Remove default browser margin */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 1fr 3fr;
+    
+}
+
+/* Header Styling */
+.header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Navigation Menu Styling */
+.nav {
+    grid-area: nav;
+    background-color: yellow;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background-color: grey;
+}
+
+/* Main Content Styling */
+.main {
+    grid-area: main;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #ddd;
+    padding: 20px;
+}
+
+/* Footer Styling */
+.footer {
+    grid-area: footer;
+    background-color: grey;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    margin-top: auto;
+}
