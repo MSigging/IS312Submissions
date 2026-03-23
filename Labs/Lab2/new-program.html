@@ -1,0 +1,44 @@
+/*
+Author: Megdelene SIGGING
+Date: 23rd March 2025 
+Unit: Web Application Development 
+*/
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Program</title>
+    <script>
+       
+        function validateForm() {
+            let code = document.forms["programForm"]["p_code"].value;
+            let name = document.forms["programForm"]["p_name"].value;
+
+            if (code.trim() == "" || name.trim() == "") {
+                alert("Error: Please fill in all fields before submitting.");
+                return false; 
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Add New Program</h2>
+    <hr>
+    <form name="programForm" action="add-new-program.php" method="POST" onsubmit="return validateForm()">
+        <p>
+            <label>Program Code:</label><br>
+            <input type="text" name="p_code">
+        </p>
+        <p>
+            <label>Program Name:</label><br>
+            <input type="text" name="p_name">
+        </p>
+        <input type="submit" value="Submit Program">
+    </form>
+    <br>
+    <a href="index.php">Back to Home</a>
+</body>
+</html>
